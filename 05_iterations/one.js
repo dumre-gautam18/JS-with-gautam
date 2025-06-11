@@ -22,3 +22,28 @@ for (let index = 0; index < myHeros.length; index++) {
     console.log(element);
     
 }
+
+// for (let index = 1; index <= 20; index++) {
+//     const element = index;
+//     if( index == 5){
+//         console.log("Detected 5");
+//         break;
+//     }
+    
+//     console.log(element);
+
+    
+// }
+
+for (let index = 1; index <= 20; index++) {
+    const element = index;
+    if( index == 5){
+        console.log("Detected 5");
+        continue
+    }
+    
+    console.log(element);
+
+    
+}
+
