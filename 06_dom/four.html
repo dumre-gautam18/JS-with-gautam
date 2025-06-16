@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learning JavaScript</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #94BFA7; /* new body background color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #C0B7B1;
+      border-radius: 12px;
+      padding: 25px 20px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      
+    }
+
+    .container h2 {
+      color: #101820;
+      margin-bottom: 18px;
+      font-size: 26px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 0;
+    }
+
+    li {
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        padding: 20px 15px;
+      }
+
+      .container h2 {
+        font-size: 22px;
+      }
+
+      li {
+        font-size: 15px;
+        padding: 10px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const subjects = [
+      "IT Project Management",
+      "Information System Security",
+      "Cloud-Computing",
+      "Human Resource Management",
+      "Database Management System",
+      "Numerical Methods",
+      "System Analysis and Design"
+    ];
+
+    const colors = [
+      "#c5e6a6",
+      "#9899A6",
+      "#006494",
+      "brown",
+      "#1B98E0",
+      "#F78764",
+      "#DA4167"
+    ];
+
+    const div = document.createElement("div");
+    div.className = "container";
+
+    const heading = document.createElement("h2");
+    heading.innerText = "Subjects Offered";
+    div.appendChild(heading);
+
+    const ul = document.createElement("ul");
+
+    subjects.forEach((subject, index) => {
+      const li = document.createElement("li");
+      li.innerText = subject;
+      li.style.backgroundColor = colors[index % colors.length];
+      ul.appendChild(li);
+    });
+
+    div.appendChild(ul);
+    document.body.appendChild(div);
+  </script>
+</body>
+</html>
+ 
