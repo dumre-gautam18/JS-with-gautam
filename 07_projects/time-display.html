@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Time</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Use flexbox to center content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+        .container {
+            width: 200px;
+            height: 200px;
+            background-color: #6C91BF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        #clock {
+            background-color: #385F71;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="clock">
+        </div>
+    </div>
+</body>
+<script>
+    const clock = document.getElementById('clock');
+
+    setInterval(function(){
+        let time = new Date()
+        clock.innerHTML = time.toLocaleTimeString()
+    }, 1000)
+</script>
+</html>
